@@ -111,3 +111,7 @@ MIT — free to use and modify.
 💬 Questions?
 
 Feel free to reach out via GitHub or open an issue if you’re stuck!
+
+🙋‍♂️ Author
+
+Ndubuisi Ugwuja 💬 Let’s connect!
