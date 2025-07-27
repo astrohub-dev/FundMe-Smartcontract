@@ -95,6 +95,8 @@ npx hardhat run scripts/interact.ts --network sepolia
 
 • Use Hardhat Ignition for cleaner deployment
 
+📑Please feel free to read and write the version I deployed on etherscan https://sepolia.etherscan.io/address/0x6750a41dB18db84645B4Be8CdB62B3500cc64B8d#code
+
 🤝 Contributing
 
 PRs are welcome! If you find bugs or improvements, feel free to open an issue or submit a pull request.
