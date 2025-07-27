@@ -88,19 +88,20 @@ npx hardhat run scripts/interact.ts --network sepolia
 ✅ TODO
 
 • Add tests using Hardhat and Chai
+
 • Add frontend (React + Ethers.js)
+
 • Add support for other chains (Polygon, Arbitrum, etc.)
+
 • Use Hardhat Ignition for cleaner deployment
 
 🤝 Contributing
 
 PRs are welcome! If you find bugs or improvements, feel free to open an issue or submit a pull request.
-⸻
 
 📜 License
 
 MIT — free to use and modify.
-⸻
 
 💬 Questions?
 
