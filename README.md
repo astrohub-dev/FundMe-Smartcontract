@@ -49,26 +49,31 @@ require(msg.value.ethToUsd() >= MINIMUM_USD, "Not enough funds");
 
 2. Install dependencies
 
-````bash
+```bash
    yarn install
    or:
    npm install
+```
 
 3. Create .env
 
+```env
    PRIVATE_KEY=your_private_key
    RPC_URL=https://sepolia.infura.io/v3/your_project_id
    ETHERSCAN_API_KEY=your_etherscan_api_key
+```
 
 4. Compile contracts
 
 ```bash
    npx hardhat compile
+```
 
 5. Deploy to sepolia
 
 ```bash
    npx hardhat run scripts/deploy.ts --network sepolia
+```
 
 🧪 Interact with the Contract
 
@@ -78,6 +83,7 @@ Edit scripts/interact.ts to call fund() or withdraw(), then:
 npx ts-node scripts/interact.ts
 or:
 npx hardhat run scripts/interact.ts --network sepolia
+```
 
 ✅ TODO
 
@@ -99,4 +105,3 @@ MIT — free to use and modify.
 💬 Questions?
 
 Feel free to reach out via GitHub or open an issue if you’re stuck!
-````
