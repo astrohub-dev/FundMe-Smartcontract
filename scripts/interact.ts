@@ -21,7 +21,7 @@ async function main() {
 
     // Call fund() by sending ETH
     const txFund = await contract.fund({
-      value: ethers.parseEther("0.02"), // Send 0.05 ETH
+      value: ethers.parseEther("0.05"), // Send 0.05 ETH
     });
     console.log("Funding... tx hash:", txFund.hash);
     await txFund.wait();
