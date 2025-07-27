@@ -44,8 +44,11 @@ require(msg.value.ethToUsd() >= MINIMUM_USD, "Not enough funds");
 🛠 Setup and Deployment
 
 1. Clone the repo
+
+```
    git clone https://github.com/astrohub-dev/FundMe-Smartcontract.git
    cd hardhat-fundme
+```
 
 2. Install dependencies
 
