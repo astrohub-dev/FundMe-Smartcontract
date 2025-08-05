@@ -1,0 +1,36 @@
+import { ethers } from "hardhat";
+import { parseEther } from "ethers";
+import { expect } from "chai";
+
+describe("FundMe Staging test", function () {
+    let fundMe: any;
+    const sendValue = parseEther("0.03");
+    const fundMeContract = "0xbd67282F33b5c99b04Ee883758F3eE33ae6dB426";
+    before(async function () {
+        fundMe = await ethers.getContractAt("FundMe", fundMeContract);
+    });
+    it("Should allow funding and withdrawing on testnet", async function () {
+        const startingBalance = await ethers.provider.getBalance(
+            fundMeContract
+        );
+        console.log(
+            `The balance of the contract address before funding is ${startingBalance.toString()}`
+        );
+        const fundTx = await fundMe.fund({ value: sendValue });
+        await fundTx.wait(1);
+        const balanceAfterFunding = await ethers.provider.getBalance(
+            fundMeContract
+        );
+        console.log(
+            `The balance of the contract address after funding is ${balanceAfterFunding.toString()}`
+        );
+        expect(balanceAfterFunding.toString()).to.equal(sendValue.toString());
+        const withdrawTx = await fundMe.withdraw();
+        await withdrawTx.wait(1);
+        const endingBalance = await ethers.provider.getBalance(fundMeContract);
+        console.log(
+            `The balance of the contract address after withdrawing is ${endingBalance.toString()}`
+        );
+        expect(endingBalance.toString()).to.equal("0");
+    });
+});

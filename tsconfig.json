@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "target": "es2020",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "types": ["node"]
-  },
-  "include": ["./scripts", "./test", "./typechain-types"],
-  "exclude": ["node_modules", "./artifacts", "./cache"]
+    "compilerOptions": {
+        "target": "es2020",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "types": ["hardhat", "node", "@nomicfoundation/hardhat-chai-matchers"]
+    },
+    "include": ["./scripts", "./test", "./typechain-types"],
+    "exclude": ["node_modules", "./artifacts", "./cache"]
 }
