@@ -1,4 +1,4 @@
-import { ethers } from "hardhat";
+import { ethers, network } from "hardhat";
 import { parseEther } from "ethers";
 import { expect } from "chai";
 
@@ -7,6 +7,9 @@ describe("FundMe Staging test", function () {
     const sendValue = parseEther("0.03");
     const fundMeContract = "0xbd67282F33b5c99b04Ee883758F3eE33ae6dB426";
     before(async function () {
+        if (network.name === "hardhat" || network.name === "localhost") {
+            this.skip(); // Don't run staging tests on local network
+        }
         fundMe = await ethers.getContractAt("FundMe", fundMeContract);
     });
     it("Should allow funding and withdrawing on testnet", async function () {

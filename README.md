@@ -52,7 +52,7 @@ if (msg.value.ethToUsd(priceFeed));
    cd hardhat-fundme
 ```
 
-2. Install dependencies
+2. Install dependencies (feel free to use npm if it's your preference)
 
 ```bash
    yarn add --dev hardhat typescript ts-node typechain @nomicfoundation/hardhat-toolbox @typechain/hardhat @types/node @nomicfoundation/hardhat-verify @chainlink/contracts dotenv prettier solhint
@@ -78,19 +78,25 @@ if (msg.value.ethToUsd(priceFeed));
    npx hardhat ignition deploy ignition/modules/FundMeModule.ts --network sepolia
 ```
 
-6. Run Unit and Staging tests(output gas report)
+6. Run unit test (output gas report)
 
 ```bash
    npx hardhat test
 ```
 
-6. Lint contracts
+7. Run staging test
+
+```bash
+   npx hardhat test test/staging/FundMe.staging.test.ts --network sepolia
+```
+
+8. Lint contracts
 
 ```bash
    npx solhint 'contracts/**/*.sol'
 ```
 
-6. Verify contract on Etherscan
+9. Verify contract on Etherscan
 
 ```bash
    npx hardhat verify --network sepolia <your contract address> <contructor argument>
