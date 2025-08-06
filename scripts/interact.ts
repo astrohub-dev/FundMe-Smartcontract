@@ -58,9 +58,6 @@ async function main() {
             ethers.formatEther(balanceAfterWithradwal),
             "ETH"
         );
-
-        const ethb = await provider.getBalance(contractAddress);
-
         process.exit(0);
     } catch (error) {
         console.error("error caught:", error);
