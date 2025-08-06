@@ -38,7 +38,7 @@ async function main() {
         // Read balance of the contract after funding
         const balanceAfterFunding = await provider.getBalance(contractAddress);
         console.log(
-            "Contract balance:",
+            "Contract balance after funding:",
             ethers.formatEther(balanceAfterFunding),
             "ETH"
         );
@@ -54,7 +54,7 @@ async function main() {
             contractAddress
         );
         console.log(
-            "Contract balance:",
+            "Contract balance after withdrawing:",
             ethers.formatEther(balanceAfterWithradwal),
             "ETH"
         );
