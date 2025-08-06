@@ -7,7 +7,7 @@ async function main() {
         const { SEPOLIA_RPC_URL, PRIVATE_KEY } = process.env;
         const provider = new ethers.JsonRpcProvider(SEPOLIA_RPC_URL);
         const wallet = new ethers.Wallet(PRIVATE_KEY!, provider);
-        const contractAddress = "0x6750a41dB18db84645B4Be8CdB62B3500cc64B8d";
+        const contractAddress = "0xbd67282F33b5c99b04Ee883758F3eE33ae6dB426";
 
         // ABI from artifacts
         const contractABI = fundMeArtifact.abi;
