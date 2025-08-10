@@ -1,4 +1,4 @@
-import { ethers } from "hardhat";
+import { ethers, network } from "hardhat";
 import { parseEther, parseUnits } from "ethers";
 import { expect } from "chai";
 

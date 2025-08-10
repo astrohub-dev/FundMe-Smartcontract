@@ -1,15 +1,13 @@
 import { ethers } from "ethers";
 import "dotenv/config";
 import fundMeArtifact from "../artifacts/contracts/FundMe.sol/FundMe.json";
+import { contractAddress } from "./constants";
 
 async function main() {
     try {
         const { SEPOLIA_RPC_URL, PRIVATE_KEY } = process.env;
         const provider = new ethers.JsonRpcProvider(SEPOLIA_RPC_URL);
         const wallet = new ethers.Wallet(PRIVATE_KEY!, provider);
-        const contractAddress = "0xbd67282F33b5c99b04Ee883758F3eE33ae6dB426";
-
-        // ABI from artifacts
         const contractABI = fundMeArtifact.abi;
 
         // Connect to deployed contract
